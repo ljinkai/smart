@@ -1,0 +1,2 @@
+# smart
+smart idea useful
