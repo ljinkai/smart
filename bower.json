@@ -1,0 +1,15 @@
+{
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+  },
+  "name": "webapp",
+  "version": "0.0.0",
+  "author": "fibers",
+  "private": true
+}
