@@ -1,0 +1,33 @@
+<div class="item_page" ng-controller="CommentController">
+    <div class="item_con">
+        <div class="item_title" data-id="<%= result.id %>">
+            <div class="item_title_a" alt="<%= result.title %>"><%= result.title %></div>
+        </div>
+        <div class="item_summary" id="item_summary">
+            <%- result.summary %>
+        </div>
+        <div class="item_line item_sub">
+            <span><span id="<%= result.id %>_up_count"><%= result.up %></span>顶 </span>
+            <% if (result.nick) {%>
+            <span>by <%=result.nick%> | </span>
+            <%}%>
+            <span><%=: result.time | timeago %></span>
+        </div>
+
+        <div class="item_line">
+            <textarea id="content" rows="4" class="itemInput" placeholder="写下你的看法"></textarea>
+        </div>
+        <div class="item_line">
+            <input id="submit" class="pub_btn itemBtn" value="提交" type="button" ng-click="add($event)"/>
+        </div>
+        <div class="item_line">
+            <div class="item_com">
+                <li class="item_li" ng-repeat="item in comments" >
+                    <span class="item_nick" ng-bind="item.nick"></span>
+                    <span ng-bind="item.time | timeAgo"></span>
+                    <div class="item_content" ng-bind="item.content"></div>
+                </li>
+            </div>
+        </div>
+    </div>
+</div>

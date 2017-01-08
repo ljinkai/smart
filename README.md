@@ -1,2 +1,2 @@
-# smart
-smart idea useful
+# coollist
+coollist.cn

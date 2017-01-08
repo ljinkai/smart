@@ -22,26 +22,56 @@
 
 module.exports.routes = {
 
-    /***************************************************************************
-     *                                                                          *
-     * Make the view located at `views/homepage.ejs` (or `views/homepage.jade`, *
-     * etc. depending on your default view engine) your home page.              *
-     *                                                                          *
-     * (Alternatively, remove this and add an `index.html` file in your         *
-     * `assets` directory)                                                      *
-     *                                                                          *
-     ***************************************************************************/
+  /***************************************************************************
+  *                                                                          *
+  * Make the view located at `views/homepage.ejs` (or `views/homepage.jade`, *
+  * etc. depending on your default view engine) your home page.              *
+  *                                                                          *
+  * (Alternatively, remove this and add an `index.html` file in your         *
+  * `assets` directory)                                                      *
+  *                                                                          *
+  ***************************************************************************/
 
-    '/': 'HomeController.home',
+    '/': "HomeController.home",
+    '/copy': "HomeController.copy",
+    '/new': "HomeController.new",
+    '/submit': "HomeController.submit",
+    '/set' : {
+        view: 'setting'
+    },
+    '/@rss' : "SpiderController.rssParse",
+    '/@rss-test' : "SpiderController.excuteRssInsert",
+    '/@feedback' : "CommonController.addFeedback",
+    'post /@title-get' : "CommonController.parseHtmlTitle",
+    'post /@login' : "CommonController.login",
+    'post /@register' : "CommonController.register",
+    'post /@addWeb': "CommonController.addLink",
+    'post /@duang': "HomeController.duang",
+    'post /@comment': "CommentController.addComment",
+    'post /@getcomments': "CommentController.getComments",
+    'get /@email-send': "CommonController.emailSend",
+    'get /next/': "HomeController.next",
+    'get /about': "HomeController.about",
+    'get /feedback': "HomeController.feedback",
+    'get /login': "HomeController.login",
+    'get /item/:id': "CommentController.item",
+    'get /item/:id/*': "CommentController.item",
+
+    'get /weixin/': "WeiXinController.signature",
+    'post /weixin/': "WeiXinController.receive",
+
+    'post /chrome/': "ChromeController.sendNotification"
 
 
-    /***************************************************************************
-     *                                                                          *
-     * Custom routes here...                                                    *
-     *                                                                          *
-     *  If a request to a URL doesn't match any of the custom routes above, it  *
-     * is matched against Sails route blueprints. See `config/blueprints.js`    *
-     * for configuration options and examples.                                  *
-     *                                                                          *
-     ***************************************************************************/
+
+  /***************************************************************************
+  *                                                                          *
+  * Custom routes here...                                                    *
+  *                                                                          *
+  *  If a request to a URL doesn't match any of the custom routes above, it  *
+  * is matched against Sails route blueprints. See `config/blueprints.js`    *
+  * for configuration options and examples.                                  *
+  *                                                                          *
+  ***************************************************************************/
+
 };

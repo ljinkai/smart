@@ -1,0 +1,11 @@
+<div class="default-page" ng-controller="SpiderController">
+    <form class="sp_form">
+        <input type="text" class="sp_name" id="submit_name" placeholder="标题">
+        <textarea id="submit_summary" class="sp_summary" placeholder="详细说明"></textarea>
+        <input type="button" class="pub_btn sp_btn" value="添加" ng-click="add($event)">
+        <label class="sp_label" ng-bind="resultTip"></label>
+        <div class="sp_policy">
+            <p>我们会在2~5个工作日审核您发布的内容</p>
+        </div>
+    </form>
+</div>

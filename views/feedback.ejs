@@ -1,0 +1,8 @@
+<div class="feedback_page" ng-controller="FeedBackController">
+    <form class="sp_form">
+        <textarea type="text" class="fd_msg" rows="6" placeholder="任何意见或建议(必填)"></textarea>
+        <input type="text" class="fd_email" placeholder="邮箱(必填)"/>
+        <input type="button" class="sp_btn" value="发送" ng-click="add($event)">
+        <label class="sp_label" ng-bind="resultTip"></label>
+    </form>
+</div>

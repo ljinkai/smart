@@ -9,12 +9,13 @@
  * 		https://github.com/gruntjs/grunt-contrib-cssmin
  */
 module.exports = function(grunt) {
-    var date = require('../pipeline').getTimeStamp();
 
-    grunt.config.set('cssmin', {
-        target: {
-            files: require('../pipeline').cssMin()
-        }
+	grunt.config.set('cssmin', {
+		dist: {
+			src: ['.tmp/public/concat/production.css'],
+			dest: '.tmp/public/min/production.min.css'
+		}
 	});
+
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 };

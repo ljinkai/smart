@@ -27,10 +27,6 @@ module.exports = function(grunt) {
 
 			// When assets are changed:
 			tasks: ['syncAssets' , 'linkAssets']
-		},
-		style: {
-			files: ['assets/style/**/*.scss'],
-			tasks: ['scss']
 		}
 	});
 

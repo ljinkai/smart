@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>酷粒 - 认知的力量</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
+    <meta name="keywords"
+        content="酷粒,认知">
+    <meta name="description"
+        content="分享概念，提升认知, 这是一个安静的存在,脑洞大开的地方">
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/bootstrap.css">
+    <link rel="stylesheet" href="/styles/importer.css">
+    <!--STYLES END-->
+      <link rel="stylesheet" href="/vendor/samplemde/simplemde.min.css">
+  </head>
+
+  <body ng-app="app" class="body">
+      <div class="cl_body sp_page">
+          <% include nav.ejs %>
+
+          <div class="default-page" ng-controller="SpiderController">
+              <form class="sp_form">
+                  <input type="text" class="sp_name" id="submit_name" placeholder="标题">
+                  <textarea id="submit_summary" class="sp_summary" placeholder="详细说明"></textarea>
+                  <div class="sp_editor" id="sp_editor"></div>
+                  <input type="button" class="pub_btn sp_btn" value="添加" ng-click="add($event)">
+                  <label class="sp_label" ng-bind="resultTip"></label>
+                  <div class="sp_policy">
+                      <p>我们会在2~5个工作日审核您发布的内容</p>
+                  </div>
+              </form>
+          </div>
+
+          <% include footer.ejs %>
+      </div>
+
+    <script src="/vendor/jquery/jquery.js"></script>
+    <script src="/vendor/bootstrap/bootstrap.js"></script>
+    <script src="/vendor/angular/angular.js"></script>
+    <script src="/vendor/samplemde/simplemde.min.js"></script>
+
+    <!--SCRIPTS-->
+    <script src="/js/app.js"></script>
+    <script src="/js/jquery.cookie.js"></script>
+    <!--SCRIPTS END-->
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+          var hm = document.createElement("script");
+          hm.src = "//hm.baidu.com/hm.js?ced1e54e8b88d176fc750466cc231a94";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+      <script>
+          var simplemde = new SimpleMDE({ element: document.getElementById("submit_summary") });
+      </script>
+  </body>
+</html>

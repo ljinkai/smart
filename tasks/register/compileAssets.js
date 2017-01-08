@@ -1,12 +1,8 @@
 module.exports = function (grunt) {
-//    'bower:install',
-//		'jst:dev',
-
-    grunt.registerTask('compileAssets', [
-//    	'bower:install',
+	grunt.registerTask('compileAssets', [
 		'clean:dev',
+		'jst:dev',
 		'less:dev',
-		// 'sass:dev',
 		'copy:dev',
 		'coffee:dev'
 	]);
