@@ -5,7 +5,7 @@
         <div class="ls_row">
         <div class="ls_title">
 
-            <a href="/item/<%= item.id %>/<%= item.title %>" class="ls_a" target="_blank" alt="<%= item.title %>"><%= item.title %></a>
+            <a href="/item/<%= item.id %>/<%= item.title %>" class="ls_a" target="_self" alt="<%= item.title %>"><%= item.title %></a>
             <div class="ls_summary"><%=: item.summary | summaryFilter %></div>
             <div class="ls_sub">
                 <span>

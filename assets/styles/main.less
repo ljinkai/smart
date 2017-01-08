@@ -10,7 +10,13 @@ a {color: #000000;}
 .pub_blue {color:#1253A4;}
 //
 .header {height: 44px;line-height:44px;color: #757575;
-  box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);padding: 0px;margin: 0px;}
+  box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);padding: 0px;margin: 0px;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  background-color: white;
+  z-index: 999;
+}
 .header_con {max-width: 968px;margin: 0px auto;}
 .nav_logo {width: 100px;
   background: url("../images/logo_256x256.png") no-repeat left center;
@@ -59,7 +65,7 @@ a {color: #000000;}
 .home_back,.item_back {background-color: #f4f4f2;}
 .home_back .footer,.item_back .footer {background: none;border-top: none;}
 .header_set {text-align: right;;}
-.ls_body {text-align: left;color: #828282;line-height: 1.8em;min-height: 500px;}
+.ls_body {text-align: left;color: #828282;line-height: 1.8em;min-height: 500px;margin-top: 54px;}
 .ls_con {max-width: 968px;margin: 10px auto 0px auto;background-color: white;}
 .ls_item {float: left;width: 100%;}
 .ls_row {margin: 0px 16px;border-bottom: 1px solid #eee;padding: 10px 0px;}
@@ -90,7 +96,7 @@ a {color: #000000;}
 //
 .sp_page {}
 .sp_page .footer {position: relative !important;}
-.sp_form {max-width: 600px;margin: 0px auto;}
+.sp_form {max-width: 600px;margin: 0px auto;padding: 0px 16px;}
 .sp_policy {
   width: 100%;
   color: gray;
@@ -150,7 +156,7 @@ a {color: #000000;}
 .itemBtn {width: 100px;}
 
 //about
-.about_page {margin: 20px auto 60px auto;text-align: left;max-width: 500px;}
+.about_page {margin: 20px auto 60px auto;text-align: left;max-width: 500px;padding: 0px 16px;}
 .about_desc {color: #f26964;font-size: 12px;width: 100%;text-align: center;}
 //feedback
 .feedback_page {max-width: 1024px;margin: 20px auto;}
@@ -163,7 +169,15 @@ a {color: #000000;}
 //
 .cl_body .footer {position: fixed;}
 
+.ls_body, .item_body , .cl_body {margin-top: 54px;}
+
 @media screen and (max-width: 767px) {
   .ls_a {width: 92%;}
+
+}
+@media screen and (max-width: 968px) {
+  .nav_item-main {margin-left: 16px;margin-right: 0px;}
+  .nav_add {margin-right: 16px;width: 60px;}
+  .nav_user {min-width: 60px;}
 
 }
