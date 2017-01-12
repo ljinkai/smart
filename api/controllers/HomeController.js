@@ -228,7 +228,7 @@ module.exports = {
             "desc":"加入酷粒,我们一起分享感动和成长"}});
     },
     submit : function(req, res) {
-        res.render("addLayout",{});
+        res.render("submitLayout",{});
     }
 
 };
