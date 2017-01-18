@@ -105,6 +105,13 @@ function timeAgo(timeStr,timeFlag) {
     }
     return str;
 }
+function sub (str) {
+    if (str.length > 60) {
+        return str.substring(0,60).replace(/<p>/g, "");
+    } else {
+        return str.replace(/<p>/g, "");
+    }
+};
 var item = "S_ITEM";
 module.exports = {
     item: function (req, res) {
@@ -112,9 +119,11 @@ module.exports = {
         ejs.filters.timeago = function(time) {
             return timeAgo(time,true);
         };
+
         var id = req.param("id");
         avs.first(req,item,"objectId",id).then(function(object) {
-            var temp = {"url":object.get('url'),"title":object.get('title'),"summary":marked(object.get('summary')),"nick":object.get('nick'),
+            var summary = marked(object.get('summary'));
+            var temp = {"url":object.get('url'),"title":object.get('title'),"desc":sub(summary),"summary":summary,"nick":object.get('nick'),
                 "up":object.get('up'),"user":object.get('user'),"time":object.createdAt,"id":object.id};
             res.view("item",{"result":temp});
         },function(error) {

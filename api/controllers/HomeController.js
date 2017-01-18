@@ -144,6 +144,12 @@ module.exports = {
         ejs.filters.timeago = function(time) {
             return timeAgo(time,true);
         };
+        ejs.filters.summaryFilter = function(str) {
+            if (str.length > 120) {
+                str = str.substring(0,120) + "...";
+            }
+            return str;
+        };
         res.locals.layout = "homeLayout";
         avs.findHome(req,item,{"new":true}).then(function(result) {
             var resArray = result.listArray;

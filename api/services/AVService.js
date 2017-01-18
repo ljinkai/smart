@@ -89,7 +89,7 @@ module.exports = {
         if (params && params.skip) {
             query.skip(params.skip);
         }
-        var limit = 30;
+        var limit = 10;
         if (params && params.limit) {
             limit = params.limit;
         }

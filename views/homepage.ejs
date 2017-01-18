@@ -6,7 +6,7 @@
             <div class="ls_title">
 
                 <a href="/item/<%= item.id %>/<%= item.title %>" class="ls_a" target="_self" alt="<%= item.title %>"><%= item.title %></a>
-                <div class="ls_summary"><%= item.summary %></div>
+                <div class="ls_summary"><%=: item.summary | summaryFilter %></div>
                 <div class="ls_sub">
                 <span>
                     <span class="ls_up" title="顶一下">
@@ -35,5 +35,6 @@
         </div>
 
     <%}%>
+
 </div>
 
