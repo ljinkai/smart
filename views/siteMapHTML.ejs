@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>5miles - Your Mobile Marketplace</title>
+
+    <meta name="keywords"
+          content="5miles,5milesapp,5 miles,auction,buy and sell,classifieds,offer,used,online shopping,secondhand,amazon, walmart, bestbuy, target, ebay, gumtree, craigslist, poshmark, vinted, olx, stuffle, shpock, wallapop">
+    <meta name="description"
+          content="5miles is the fun, free and easy mobile app to buy, sell and explore within your city. Open your pocket shop and discover amazing local items & services. ">
+    <% include head.ejs %>
+</head>
+
+<body ng-app="app" id="homeLayout" ng-controller="HomeController" class="layout_home _gaPageView" data-pageview="sitemap_view">
+
+<% include pub/banner.ejs %>
+<div class="site-map">
+    <div class="container">
+        <div class="row main-content">
+            <dl>
+              <% category.forEach(function(item, index){%>
+                <h1><%=item.title %></h1>
+                <% item.child.forEach(function(child, order){%>
+                  <dd class="clearfix">
+                    <a href="/a/<%=:child | replaceCate %>" title="<%=child.title %>" alt="<%=child.title %>"><h2><%=child.title %></h2></a>
+                  </dd>
+                <%});%>
+              <%});%>
+            </dl>
+          <% siteData.forEach(function(set){%>
+          <dl>
+            <dt><h1><%=set.setname%></h1></dt>
+            <%set.urls.forEach(function(url){%>
+            <dd class="clearfix">
+              <a href="<%=url.url%>" title="<%=url.name%>" alt="<%=url.name%>"><h2><%=url.name%></h2></a>
+            </dd>
+            <%})%>
+          </dl>
+          <%})%>
+
+          <dl>
+            <%
+            var region = "";
+            city.forEach(function(item, index){
+            if (item.region == region) {%>
+              <dd class="clearfix">
+                <a href="/c/<%=: item.city | cityParse %>" title="<%=item.city %>" alt="<%=item.city %>"><h2><%=item.city %></h2></a>
+              </dd>
+            <%
+            } else {%>
+              <h1><%=item.region %></h1>
+              <dd class="clearfix">
+                <a href="/c/<%=: item.city | cityParse %>" title="<%=item.city %>" alt="<%=item.city %>"><h2><%=item.city %></h2></a>
+              </dd>
+            <%}
+              region = item.region;
+            %>
+            <%});%>
+          </dl>
+
+
+        </div>
+    </div>
+</div>
+
+<!--5MILES_SCRIPTS-->
+<script src="/vendor_copy/jquery/jquery.js"></script>
+<script src="/vendor_copy/bootstrap/bootstrap.js"></script>
+<script src="/js/dependencies/jquery.cookie.js"></script>
+<script src="/js/dependencies/angular.min.js"></script>
+<script src="/js/dependencies/masonry.pkgd.min.js"></script>
+<script src="/js/dependencies/imagesloaded.pkgd.min.js"></script>
+<script src="/js/dependencies/jquery.smartbanner.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/home/home.js"></script>
+<!--5MILES_SCRIPTS END-->
+
+<% include footer.ejs %>
+</body>
+</html>

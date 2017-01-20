@@ -57,6 +57,9 @@ module.exports.routes = {
     'get /item/:id': "CommentController.item",
     'get /item/:id/*': "CommentController.item",
 
+    'get /sitemap.xml' : 'SeoController.siteMapXml',
+    'get /sitemap' : 'SeoController.siteMapHTML',
+
     'get /weixin/': "WeiXinController.signature",
     'post /weixin/': "WeiXinController.receive",
 
