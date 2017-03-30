@@ -63,7 +63,11 @@ module.exports.routes = {
     'get /weixin/': "WeiXinController.signature",
     'post /weixin/': "WeiXinController.receive",
 
-    'post /chrome/': "ChromeController.sendNotification"
+    'post /chrome/': "ChromeController.sendNotification",
+
+    'get /api/hp/idlist/0': "ApiController.list",
+    'get /api/reading/carousel': "ApiController.carousel",
+    'get /api/reading/index': "ApiController.read",
 
 
 
