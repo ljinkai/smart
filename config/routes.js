@@ -68,6 +68,7 @@ module.exports.routes = {
     'get /api/hp/idlist/0': "ApiController.list",
     'get /api/reading/carousel': "ApiController.carousel",
     'get /api/reading/index': "ApiController.read",
+    'get /api/essay/2152': "ApiController.essay",
 
 
 
