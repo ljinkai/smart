@@ -1,0 +1,30 @@
+<div style="width: 50%;margin: 50px auto;" >
+    <textarea id="area_from" style="width: 100%;" rows="5">
+    </textarea>
+    <button id="transfer" name="transfer" onclick="transfer()" style="width: 100%;margin: 20px 0px;">转换</button>
+    <textarea id="area_to" style="width: 100%;" rows="5">
+    </textarea>
+</div>
+<script>
+    function transfer() {
+        var fromStr = $("#area_from").val();
+        var items = fromStr.split("*");
+        var lastStr = "";
+        for (var i in items) {
+            if (i == 0) {
+                continue;
+            }
+            var item = items[i].trim();
+            item = item.substr(1, item.length-2);
+            item = item.replace(/]\(/,'$');
+                lastStr += item;
+            if (i < (items.length-1)) {
+                lastStr += ",";
+            }
+
+            console.log(item);
+        }
+        var str = "links: " + lastStr;
+        $("#area_to").val(str);
+    }
+</script>
