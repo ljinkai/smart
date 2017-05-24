@@ -15,6 +15,9 @@ var KEY = require("../services/key.js");
 module.exports = {
     links: function (req, res) {
         res.view("lib/tools",{});
+    },
+    jsonparseonline: function (req, res) {
+        res.render("json_parse_online/json_parse_online",{});
     }
 };
 

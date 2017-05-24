@@ -70,6 +70,8 @@ module.exports.routes = {
     'get /api/reading/index': "ApiController.read",
     'get /api/essay/2152': "ApiController.essay",
 
+    'get /json-parser-online': "ToolController.jsonparseonline",
+
 
 
   /***************************************************************************
