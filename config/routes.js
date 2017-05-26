@@ -71,6 +71,7 @@ module.exports.routes = {
     'get /api/essay/2152': "ApiController.essay",
 
     'get /json-parser-online': "ToolController.jsonparseonline",
+    'get /html-char': "ToolController.htmlCode",
 
 
 

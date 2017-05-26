@@ -18,6 +18,9 @@ module.exports = {
     },
     jsonparseonline: function (req, res) {
         res.render("json_parse_online/json_parse_online",{});
+    },
+    htmlCode: function (req, res) {
+        res.render("htmlcode/htmlCode",{});
     }
 };
 
