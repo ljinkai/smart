@@ -32,7 +32,7 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-    '/': "HomeController.home",
+    '/': "ToolsController.home",
     '/copy': "HomeController.copy",
     '/new': "HomeController.new",
     '/submit': "HomeController.submit",
