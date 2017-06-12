@@ -3,19 +3,22 @@
   <head>
       <%
         tit = "";
+        key = "";
         desc = "";
         if (typeof extData === "undefined") {
             tit = "web前端在线效率工具 - 酷粒";
-            desc = "在线字符串转JSON, HTML特殊字符表";
+            key = "酷粒,web工具,字符串转JSON,json parser online,html特殊符号,github,javascript,css,html5,最热";
+            desc = "在线字符串转JSON, HTML特殊字符表, Github每日web最热项目";
         } else {
             tit = extData.title;
+            key = extData.keywords;
             desc = extData.desc;
         }
         %>
     <title><%= tit %></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
     <meta name="keywords"
-        content="酷粒,cool list,coollist,kuli,链接,分享,cool link,share & link,好玩,有趣,有节操">
+        content="<%= key %>">
     <meta name="description"
         content="<%= desc %>">
     <meta property="og:title" content="<%= tit %>"/>

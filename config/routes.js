@@ -72,6 +72,7 @@ module.exports.routes = {
 
     'get /json-parser-online': "ToolController.jsonparseonline",
     'get /html-char': "ToolController.htmlCode",
+    'get /github-web-daily-hot': "GithubController.getList",
 
 
 

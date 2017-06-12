@@ -1,0 +1,26 @@
+
+<style>
+    .wrapper {
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        background: #fff;
+        height: auto;}
+    table {border-collapse: collapse;
+        border-spacing: 0;}
+    .pb20 {padding-bottom: 20px;padding-top: 20px;}
+    .Tsfuhao-Wrap02 th, .Tsfuhao-Wrap td {
+        border: 1px solid #c6cede;
+        border-collapse: collapse;
+        padding: 7px;
+    }
+    .line {border-bottom: 1px #d3d3d3 solid;width: 100%;padding: 10px 0px}
+</style>
+<div class="github_body">
+    <% data.forEach(function(item, index) {%>
+    <div class="line">
+        <div><a href="<%= item.html_url %>" style="font-size: 16px;"><%= item.name %></a> &nbsp;&nbsp;&nbsp;<span>stars: <%= item.stargazers_count %></span></div>
+        <div><%= item.description %></div>
+    </div>
+    <%})%>
+</div>
