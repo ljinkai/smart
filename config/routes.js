@@ -73,6 +73,8 @@ module.exports.routes = {
     'get /json-parser-online': "ToolController.jsonparseonline",
     'get /html-char': "ToolController.htmlCode",
     'get /github-web-daily-hot': "GithubController.getList",
+    'get /online-image-sprite': "ToolController.onlineimagesprite",
+    'get /online-compress-image': "ToolController.onlinetinypng",
 
 
 
