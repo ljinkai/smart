@@ -17,9 +17,13 @@
     .line {border-bottom: 1px #d3d3d3 solid;width: 100%;padding: 10px 0px}
 </style>
 <div class="github_body">
-    <% data.forEach(function(item, index) {%>
+    <% data.forEach(function(item, index) {
+      if (index < 5) {
+          return true;
+      }
+    %>
     <div class="line">
-        <div><a href="<%= item.html_url %>" style="font-size: 16px;"><%= item.name %></a> &nbsp;&nbsp;&nbsp;<span>stars: <%= item.stargazers_count %></span></div>
+        <div><a href="<%= item.html_url %>" style="font-size: 16px;" target="_blank"><%= item.name %></a> &nbsp;&nbsp;&nbsp;<span>stars: <%= item.stargazers_count %></span></div>
         <div><%= item.description %></div>
     </div>
     <%})%>

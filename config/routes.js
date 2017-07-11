@@ -75,6 +75,7 @@ module.exports.routes = {
     'get /github-web-daily-hot': "GithubController.getList",
     'get /online-image-sprite': "ToolController.onlineimagesprite",
     'get /online-compress-image': "ToolController.onlinetinypng",
+    'get /vector-icon-font': "ToolController.iconfonts",
 
 
 

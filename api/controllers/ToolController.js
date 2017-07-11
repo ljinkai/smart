@@ -30,6 +30,10 @@ module.exports = {
     onlinetinypng: function (req, res) {
         res.view("tiny/tiny",{"extData":{"title":"在线压缩图片png或者JPEG - 酷粒","keywords":"压缩图片,PNG,JEPG,最小化,在线,online,compress",
             "desc":"在线压缩图片png或者JPEG, 优化图片质量"}});
+    },
+    iconfonts: function (req, res) {
+        res.view("icons/icon_index",{"extData":{"title":"在线矢量图标库icon font - 酷粒","keywords":"矢量图标,阿里巴巴,icon font,在线矢量,online icon",
+            "desc":"阿里巴巴在线矢量图标库"}});
     }
 };
 
