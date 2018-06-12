@@ -34,6 +34,10 @@ module.exports = {
     iconfonts: function (req, res) {
         res.view("icons/icon_index",{"extData":{"title":"在线矢量图标库icon font - 酷粒","keywords":"矢量图标,阿里巴巴,icon font,在线矢量,online icon",
             "desc":"阿里巴巴在线矢量图标库"}});
-    }
+    },
+	favicon: function (req, res) {
+		res.view("icons/icon_index",{"extData":{"title":"在线Favicon生成 - 酷粒","keywords":"favicon,Favicon生成,favicon generator",
+				"desc":"上传图片，自动生成各种尺寸的favicon图标"}});
+	}
 };
 

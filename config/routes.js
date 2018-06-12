@@ -76,6 +76,7 @@ module.exports.routes = {
     'get /online-image-sprite': "ToolController.onlineimagesprite",
     'get /online-compress-image': "ToolController.onlinetinypng",
     'get /vector-icon-font': "ToolController.iconfonts",
+    'get /favicon-generator': "ToolController.favicon",
 
 
 
